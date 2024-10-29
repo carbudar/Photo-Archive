@@ -1,0 +1,145 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+#title {
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Smooth fade-out effect */
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Hidden state for title */
+#title.hide-title {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.removeTitle{
+    opacity: 0;
+}
+
+
+#pageContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+#header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100vw;
+    padding-left: 5vh;
+    padding-right:5vw;
+    height:13vh;
+    align-items: center;
+    border-bottom: 1px solid rgb(6, 6, 206);
+}
+.right{
+    display: flex;
+    gap: 5vw;
+
+}
+.fa-brands,
+.fa-regular{
+    color:black;
+}
+
+.fa-brands:hover,
+.fa-regular:hover{
+    color:rgb(6, 6, 206);
+}
+
+
+#photoGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates responsive columns */
+    gap:8vh; /* Space between images */
+    width: 90vw; /* Adjust width as needed */
+    margin-left: auto;
+    margin-right:auto;
+    padding-top: 6vh;
+    padding-bottom:6vh;
+}
+
+#photoGallery img {
+    will-change: filter;
+    width: 15vw; /* Fixed width for uniformity */
+    height: 20vh; /* Fixed height for uniformity */
+    object-fit: cover; /* Crop to fill the fixed size */
+    filter: grayscale();
+}
+
+#photoGallery img:hover {
+    filter: none; /* Removes grayscale on hover */
+}
+
+.fullscreenContainer{
+    height:100vh;
+    width:100vw;
+}
+
+.notif {
+    color: rgb(6, 6, 206);
+    padding: 10px 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    font-size: 1rem;
+}
+
+
+#imageFull{
+    display: flex;
+    justify-content: center;
+    height:84vh;
+    width:100vw;
+    padding: 5vh;
+    box-sizing: border-box;
+    
+    
+}
+
+#imageFull img{
+    max-height: 100%;
+    width: auto;
+    
+}
+
+#info{
+    height:16vh;
+    width:100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#infoLeft{
+    padding-left: 5vw;
+
+}
+
+#infoRight{
+    padding-right: 5vw;
+    text-align: end;
+}
