@@ -1,3 +1,18 @@
+/*font family*/
+.quattrocento-regular {
+font-family: "Quattrocento", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.quattrocento-bold {
+font-family: "Quattrocento", serif;
+font-weight: 700;
+font-style: normal;
+}
+
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,7 +23,7 @@ html, body {
 
 
 #title {
-    background-color: antiquewhite;
+    background-color: white;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -20,8 +35,12 @@ html, body {
     z-index: 10;
     opacity: 1;
     transition: opacity 0.5s ease; /* Smooth fade-out effect */
+    color:rgb(6, 6, 206);
 }
 
+h1{
+    font-family: Quattrocento;
+}
 .no-scroll {
     overflow: hidden;
 }
@@ -53,11 +72,17 @@ html, body {
     height:13vh;
     align-items: center;
     border-bottom: 1px solid rgb(6, 6, 206);
+    margin-left: 2vw;
+    margin-right: 2vw;
+    
 }
 .right{
     display: flex;
     gap: 5vw;
+}
 
+.left p{
+    font-family: Quattrocento;
 }
 .fa-brands,
 .fa-regular{
@@ -133,6 +158,8 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 5vh;
+    box-sizing: border-box;
 }
 #infoLeft{
     padding-left: 5vw;
@@ -142,4 +169,19 @@ html, body {
 #infoRight{
     padding-right: 5vw;
     text-align: end;
+}
+
+.titleHere, .placeHere {
+    font-weight: bold;
+    font-family: Quattrocento;
+    color: rgb(6, 6, 206);
+}
+
+.dateHere,
+.cameraHere,
+.notif{
+font-family: "muli", sans-serif;
+font-weight: 200;
+font-style: normal;
+font-size: 0.8em;
 }
